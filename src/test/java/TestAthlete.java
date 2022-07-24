@@ -9,17 +9,18 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class TestGrade {
 
   @Test
-  public void testProps()
+  public void testGrade()
   {
     Athlete a1 = new Athlete("Linoy Ashram", 4);
     assertEquals(a1.getName(), "Linoy Ashram");
     Grade g1 = new Grade("Clubs", 24.1);
     Grade g2 = new Grade("Ribbon", 25.1);
-    a1.addGrade(g1);
+    boolean b = a1.addGrade(g1);
+    assertEquals(b, true);
     a1.addGrade(g2);
     double d = a1.average();
     assertEquals(d, 24.6);
-    boolean b = a1.allAbove(20);
+    b = a1.allAbove(20);
     assertEquals(b, true);
 
     Athlete a2 = new Athlete(a1);
