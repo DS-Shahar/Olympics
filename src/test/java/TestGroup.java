@@ -23,8 +23,16 @@ public class TestGroup {
     a2.addGrade(g2);
     
     Group g = new Group("ISR", 2);
-    g.addAthlete(a1);
+    boolean b = g.addAthlete(a1);
+    assertEquals(b, true);
     g.addAthlete(a2);
-    g.
+    g.deleteAthlete(a1);
+    g.addAthlete(a1);
+    
+    String s = g.getBest();
+    assertEquals(s, "Linoy Ashram");
+    
+    b = g.addGrade("Linoy Ashram", "Hoop", 24.7);
+    assertEquals(b, true);    
   }
 }
