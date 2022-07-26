@@ -11,12 +11,12 @@ public class TestGrade {
    @Test
    public void testProps()
    {
-     Grade g = new Grade("Clubs", 24.5);
+     Grade g = new Grade("Clubs", 24);
 
      String a = r.getApparatus();
      assertEquals(a, "Clubs");
 
      int s = g.getScore()
-     assertEquals(s, 24.5);     
+     assertEquals(s, 24);     
    }
 }
