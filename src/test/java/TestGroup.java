@@ -12,13 +12,13 @@ public class TestGroup {
   public void testGroup()
   {
     Athlete a1 = new Athlete("Linoy Ashram", 4);
-    Grade g1 = new Grade("Clubs", 24.1);
-    Grade g2 = new Grade("Ribbon", 25.1);
+    Grade g1 = new Grade("Clubs", 24);
+    Grade g2 = new Grade("Ribbon", 25);
     a1.addGrade(g2);
 
     Athlete a2 = new Athlete("Dina Averina", 4);
-    g1 = new Grade("Hoop", 23.8);
-    g2 = new Grade("Ribbon", 24.1);
+    g1 = new Grade("Hoop", 23);
+    g2 = new Grade("Ribbon", 24);
     a2.addGrade(g1);
     a2.addGrade(g2);
     
@@ -32,7 +32,7 @@ public class TestGroup {
     String s = g.getBest();
     assertEquals(s, "Linoy Ashram");
     
-    b = g.addGrade("Linoy Ashram", "Hoop", 24.7);
+    b = g.addGrade("Linoy Ashram", "Hoop", 24);
     assertEquals(b, true);    
   }
 }
