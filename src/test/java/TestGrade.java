@@ -13,10 +13,10 @@ public class TestGrade {
    {
      Grade g = new Grade("Clubs", 24);
 
-     String a = r.getApparatus();
+     String a = g.getApparatus();
      assertEquals(a, "Clubs");
 
-     int s = g.getScore()
+     int s = g.getScore();
      assertEquals(s, 24);     
    }
 }
