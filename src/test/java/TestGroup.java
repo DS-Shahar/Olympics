@@ -25,14 +25,18 @@ public class TestGroup {
     Group g = new Group("ISR", 2);
     boolean b = g.addAthlete(a1);
     assertEquals(b, true);
-    g.addAthlete(a2);
-    g.deleteAthlete(a1);
-    g.addAthlete(a1);
+    b = g.addAthlete(a2);
+    assertEquals(b, true);
     
     String s = g.getBest();
     assertEquals(s, "Linoy Ashram");
-    
-    b = g.addGrade("Linoy Ashram", "Hoop", 24);
+    b = g.deleteAthlete(a1);
+    assertEquals(b, true);
+    String s = g.getBest();
+    s = g.getBest();
+    assertEquals(s, "Dina Averina");
+
+    b = g.addGrade("Dina Averina", "Clubs", 24);
     assertEquals(b, true);    
   }
 }
