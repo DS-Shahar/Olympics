@@ -20,7 +20,7 @@ public class TestAthlete {
     a1.addGrade(g2);
     double d = a1.average();
     assertEquals(d, 24.5);
-    b = a1.allAbove(20);
+    b = a1.allGradesAbove(20);
     assertEquals(b, true);
 
     Athlete a2 = new Athlete(a1);
@@ -29,7 +29,7 @@ public class TestAthlete {
     g1 = new Grade("Hoop", 23);
     b = a2.addGrade(g1);
     assertEquals(b, true);
-    b = a1.allAbove(24);
+    b = a1.allGradesAbove(24);
     assertEquals(b, false);
     
     assertEquals(a1.surpasses(a2), false);    
