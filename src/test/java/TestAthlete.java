@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class TestGrade {
+public class TestAthlete {
 
   @Test
-  public void testGrade()
+  public void testGeneral()
   {
     Athlete a1 = new Athlete("Linoy Ashram", 4);
     assertEquals(a1.getName(), "Linoy Ashram");
@@ -27,12 +27,14 @@ public class TestGrade {
     a2.setName("Dina averina");
     a2.delete("Ribbon");
     g1 = new Grade("Hoop", 23);
-    a2.addGrade(g1);
+    b = a2.addGrade(g1);
+    assertEquals(b, true);
     b = a1.allAbove(24);
     assertEquals(b, false);
     
     assertEquals(a1.surpasses(a2), false);    
-    a2.delete("Clubs");
+    b = a2.delete("Clubs");
+    assertEquals(b, true);
     a2.addGrade(new Grade("Clubs", 23));
     assertEquals(a1.surpasses(a2), true);    
    }
