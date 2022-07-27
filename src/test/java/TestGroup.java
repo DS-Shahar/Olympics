@@ -30,7 +30,7 @@ public class TestGroup {
     
     String s = g.getBestAthleteName();
     assertEquals(s, "Linoy Ashram");
-    b = g.deleteAthlete(a1);
+    b = g.deleteAthlete("Linoy Ashram");
     assertEquals(b, true);
     s = g.getBestAthleteName();
     assertEquals(s, "Dina Averina");
