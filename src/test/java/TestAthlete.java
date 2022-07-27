@@ -25,7 +25,7 @@ public class TestAthlete {
 
     Athlete a2 = new Athlete(a1);
     a2.setName("Dina averina");
-    a2.delete("Ribbon");
+    a2.deleteGrade("Ribbon");
     g1 = new Grade("Hoop", 23);
     b = a2.addGrade(g1);
     assertEquals(b, true);
@@ -33,7 +33,7 @@ public class TestAthlete {
     assertEquals(b, false);
     
     assertEquals(a1.surpasses(a2), false);    
-    b = a2.delete("Clubs");
+    b = a2.deleteGrade("Clubs");
     assertEquals(b, true);
     a2.addGrade(new Grade("Clubs", 23));
     assertEquals(a1.surpasses(a2), true);    
