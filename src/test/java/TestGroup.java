@@ -28,12 +28,11 @@ public class TestGroup {
     b = g.addAthlete(a2);
     assertEquals(b, true);
     
-    String s = g.getBest();
+    String s = g.getBestAthleteName();
     assertEquals(s, "Linoy Ashram");
     b = g.deleteAthlete(a1);
     assertEquals(b, true);
-    String s = g.getBest();
-    s = g.getBest();
+    String s = g.getBestAthleteName();
     assertEquals(s, "Dina Averina");
 
     b = g.addGrade("Dina Averina", "Clubs", 24);
