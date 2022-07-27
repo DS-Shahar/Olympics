@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class TestGroup {
 
   @Test
-  public void testGroup()
+  public void testGeneral()
   {
     Athlete a1 = new Athlete("Linoy Ashram", 4);
     Grade g1 = new Grade("Clubs", 24);
